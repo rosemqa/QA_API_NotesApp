@@ -1,0 +1,6 @@
+allure-pytest
+pytest~=7.2.2
+requests~=2.32.3
+Faker~=26.0.0
+pytest-check~=2.5.0
+pydantic~=2.7.4
