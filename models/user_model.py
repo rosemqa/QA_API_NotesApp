@@ -28,9 +28,3 @@ class LoginUserModel(BaseModel):
     status: int
     message: str
     data: LoginData
-
-
-class BaseResponseModel(BaseModel):
-    success: bool
-    status: int
-    message: str

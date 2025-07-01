@@ -1,7 +1,8 @@
 import allure
 import responses
 from config.config import Headers
-from models.user_model import UserModel, BaseResponseModel, LoginUserModel
+from models.base_model import BaseResponseModel
+from models.user_model import UserModel, LoginUserModel
 from services.users.users_endpoints import UsersEndpoints
 from services.users.users_payloads import UserPayloads
 from utils.helper import Helper

@@ -1,8 +1,10 @@
 import pytest
 from pydantic import BaseModel
+from services.notes.notes_api import NotesAPI
 from services.users.users_api import UserAPI
 
 api_user = UserAPI()
+api_note = NotesAPI()
 
 
 class RegisterUser(BaseModel):
@@ -38,3 +40,9 @@ def auth_user(request, register_user):
 def delete_new_user(request, auth_user):
     yield
     api_user.delete_user(token=request.cls.token)
+
+
+@pytest.fixture()
+def create_note(request, auth_user):
+    note, note_data = api_note.create_new_note(token=request.cls.token)
+    return note
