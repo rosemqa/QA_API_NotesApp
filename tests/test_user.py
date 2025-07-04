@@ -47,7 +47,7 @@ class TestUser:
             assert user.status == 400, 'Check the Status'
             assert user.message == error_message, 'Check the Message text'
 
-        @allure.description('Unable to create user with name that is less than 4 symbols and greater than 30 symbols')
+        @allure.description('Unable to create user with name that is less than 4 symbols or greater than 30 symbols')
         @allure.tag('negative')
         @pytest.mark.parametrize('value', ['qwe', 'qwertyuiopasdfghjklzxcvbnmqwerv'])
         def test_create_user_with_too_short_or_long_name(self, value):

@@ -1,5 +1,5 @@
 import allure
-
+import responses
 from config.config import Headers
 from models.base_model import BaseResponseModel
 from models.notes_model import NoteModel, NoteListModel
@@ -27,6 +27,54 @@ class NotesAPI(Helper):
         self.attach_response(response)
         model = NoteModel(**response.json())
         return model, payload
+
+    @allure.step('Create note with specific data')
+    def create_note_with_specific_data(self, token: str, field: str, value):
+        payload = self.payloads.create_note()
+        payload[field] = value
+        response = MyRequests.post(
+            url=self.endpoints.create_new_note,
+            json=payload,
+            headers=self.headers.auth_token(token)
+        )
+        assert response.status_code == 400, f'{response.status_code}, {response.content.decode("utf-8")}'
+        self.attach_response(response)
+        model = BaseResponseModel(**response.json())
+        return model
+
+    @allure.step('Create a note without auth header')
+    def create_note_without_auth_header(self):
+        response = MyRequests.post(
+            url=self.endpoints.create_new_note,
+            json=self.payloads.create_note(),
+        )
+        assert response.status_code == 401, f'{response.status_code}, {response.content.decode("utf-8")}'
+        self.attach_response(response)
+        model = BaseResponseModel(**response.json())
+        return model
+
+    @allure.step('Returns 500 internal server error for "create note" request')
+    @responses.activate
+    def create_note_with_internal_server_error(self, token):
+        responses.add(
+            method=responses.POST,
+            url=self.endpoints.create_new_note,
+            json={
+                "success": False,
+                "status": 500,
+                "message": "Internal Error Server"
+            },
+            status=500
+        )
+        response = MyRequests.post(
+            url=self.endpoints.create_new_note,
+            json=self.payloads.create_note(),
+            headers=self.headers.auth_token(token)
+        )
+        assert response.status_code == 500, f'{response.status_code}, {response.content.decode("utf-8")}'
+        self.attach_response(response)
+        model = BaseResponseModel(**response.json())
+        return model
 
     @allure.step('Get note by note ID')
     def get_note_by_id(self, token: str, note_id: str):
@@ -73,6 +121,33 @@ class NotesAPI(Helper):
         model = NoteModel(**response.json())
         return model, payload
 
+    @allure.step('Update note by non-existent note id')
+    def update_note_by_non_existent_id(self, token: str):
+        note_id = '68684aaf7691270289f2bdcb'
+        response = MyRequests.put(
+            url=self.endpoints.update_note_by_id(note_id),
+            json=self.payloads.update_note(),
+            headers=self.headers.auth_token(token)
+        )
+        assert response.status_code == 404, f'{response.status_code}, {response.content.decode("utf-8")}'
+        self.attach_response(response)
+        model = BaseResponseModel(**response.json())
+        return model
+
+    @allure.step('Update a note without filling in the required field')
+    def update_note_with_empty_required_field(self, token: str, note_id: str, field: str):
+        payload = self.payloads.update_note()
+        payload[field] = ''
+        response = MyRequests.put(
+            url=self.endpoints.update_note_by_id(note_id),
+            json=payload,
+            headers=self.headers.auth_token(token)
+        )
+        assert response.status_code == 400, f'{response.status_code}, {response.content.decode("utf-8")}'
+        self.attach_response(response)
+        model = BaseResponseModel(**response.json())
+        return model
+
     @allure.step('Edit the completed status of a note with the specified id')
     def update_note_status(self, token: str, note_id: str, status: bool):
         response = MyRequests.patch(
@@ -95,5 +170,3 @@ class NotesAPI(Helper):
         self.attach_response(response)
         model = BaseResponseModel(**response.json())
         return model
-
-

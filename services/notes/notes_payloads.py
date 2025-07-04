@@ -8,16 +8,22 @@ fake = Faker()
 class NotesPayloads:
     @staticmethod
     def create_note():
+        title = fake.word()
+        if len(title) < 4:
+            title += 'ab'
         return {
-            'title': fake.word() + 'c',
+            'title': title,
             'description': fake.sentence(),
             'category': random.choice(['Home', 'Work', 'Personal'])
         }
 
     @staticmethod
     def update_note():
+        title = fake.word()
+        if len(title) < 4:
+            title += 'ab'
         return {
-            'title': fake.word() + 'v',
+            'title': title,
             'description': fake.sentence(),
             'category': random.choice(['Home', 'Work', 'Personal']),
             'completed': random.choice([True, False])

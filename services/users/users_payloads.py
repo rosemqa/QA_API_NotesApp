@@ -19,7 +19,10 @@ class UpdateData(BaseModel):
 class UserPayloads:
     @staticmethod
     def create_user():
-        return RegisterData(name=fake.first_name(), email=fake.email(), password=fake.password())
+        first_name = fake.first_name()
+        if len(first_name) < 4:
+            first_name += 'ab'
+        return RegisterData(name=first_name, email=fake.email(), password=fake.password())
 
     @staticmethod
     def update_user():
