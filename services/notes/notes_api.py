@@ -98,6 +98,7 @@ class NotesAPI(Helper):
         model = NoteListModel(**response.json())
         return model
 
+    @allure.step('Get a note with non-existent note id')
     def get_not_existed_note(self, token: str, note_id: str):
         response = MyRequests.get(
             url=self.endpoints.get_note_by_id(note_id),

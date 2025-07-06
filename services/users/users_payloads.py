@@ -26,7 +26,10 @@ class UserPayloads:
 
     @staticmethod
     def update_user():
-        return UpdateData(name=fake.first_name(), phone=str(fake.random_number(10)), company=fake.company())
+        first_name = fake.first_name()
+        if len(first_name) < 4:
+            first_name += 'ab'
+        return UpdateData(name=first_name, phone=str(fake.random_number(10)), company=fake.company())
 
     new_password = fake.password()
 

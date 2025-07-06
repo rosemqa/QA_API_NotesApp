@@ -5,6 +5,8 @@ from config.base_test import BaseTest
 from services.notes.notes_constants import NotesMessages
 from services.users.users_constants import UsersMessages
 from utils.fakers import fake
+from datetime import datetime, timedelta
+from datetime import timezone
 
 
 @allure.epic('Notes')
@@ -14,6 +16,10 @@ class TestNotes:
         @allure.description('Can create a new note')
         def test_create_new_note(self, check, register_user, auth_user, delete_new_user):
             note, note_data = self.api_notes.create_new_note(token=self.token)
+
+            now = datetime.now(timezone.utc)
+            created_at = note.data.created_at
+            delta = abs(now - created_at)
 
             with check:
                 assert note.success is True, 'Check the Success'
@@ -25,6 +31,8 @@ class TestNotes:
                 assert note.data.description == note_data['description'], 'Check the note description'
             with check:
                 assert note.data.completed is False, 'Check the Completed'
+            with check:
+                assert delta < timedelta(seconds=5), 'Created_at is very different from the current time'
             with check:
                 assert note.data.category == note_data['category'], 'Check the note category'
             with check:
