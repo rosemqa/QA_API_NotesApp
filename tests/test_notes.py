@@ -55,10 +55,19 @@ class TestNotes:
 
         @allure.description('Unable to create note with a title shorter than 4 symbols or longer than 100 symbols')
         @allure.tag('negative')
-        @pytest.mark.parametrize('title_text', [fake.long_note_title(), fake.short_note_title()])
+        @pytest.mark.parametrize('title_text', ['long_title', 'short_title'])
         def test_create_note_with_too_short_or_long_title(self, auth_user, delete_new_user, title_text):
-            note = self.api_notes.create_note_with_specific_data(token=self.token, field='title', value=title_text)
-
+            if title_text == 'long_title':
+                note = self.api_notes.create_note_with_specific_data(
+                    token=self.token, field='title',
+                    value=fake.long_note_title()
+                )
+            else:
+                note = self.api_notes.create_note_with_specific_data(
+                    token=self.token,
+                    field='title',
+                    value=fake.short_note_title()
+                )
             assert note.message == NotesMessages.TITLE_ERROR, 'Check the Message text'
 
         @allure.description('Unable to create a note as unauthorized user')
