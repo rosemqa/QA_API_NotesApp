@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "686d93d5aa719302897d2609",
+        "name": "Donna",
+        "email": "kaylahughes@example.com",
+        "phone": "5894371439",
+        "company": "Little, Carroll and Mcmahon"
+    }
+}

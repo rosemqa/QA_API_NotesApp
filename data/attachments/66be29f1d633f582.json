@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully Updated",
+    "data": {
+        "id": "686d93d2aa719302897d2589",
+        "title": "stock",
+        "description": "Choice operation forward travel up late.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-08T21:55:30.483Z",
+        "updated_at": "2025-07-08T21:55:30.952Z",
+        "user_id": "686d93d1aa719302897d256c"
+    }
+}
