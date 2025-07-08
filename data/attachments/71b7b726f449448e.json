@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686d9232aa719302897d23c9",
+        "title": "light",
+        "description": "Move billion check threat statement spring.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-08T21:48:34.616Z",
+        "updated_at": "2025-07-08T21:48:34.616Z",
+        "user_id": "686d9232aa719302897d23ae"
+    }
+}

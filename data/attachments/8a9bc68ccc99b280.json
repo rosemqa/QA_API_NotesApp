@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686d9230aa719302897d2359",
+        "title": "experience",
+        "description": "Table risk remember light issue strong seat against.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-08T21:48:32.383Z",
+        "updated_at": "2025-07-08T21:48:32.383Z",
+        "user_id": "686d922faa719302897d233e"
+    }
+}

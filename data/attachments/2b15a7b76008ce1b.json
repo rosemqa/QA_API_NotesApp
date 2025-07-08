@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "686d9236aa719302897d246b",
+        "name": "Abigail",
+        "email": "creid@example.com",
+        "phone": "6374589880",
+        "company": "Wallace LLC"
+    }
+}
