@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686d9527aa719302897d26ae",
+        "title": "yourself",
+        "description": "Season likely wrong political kind billion line.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-08T22:01:11.854Z",
+        "updated_at": "2025-07-08T22:01:11.854Z",
+        "user_id": "686d9527aa719302897d2694"
+    }
+}

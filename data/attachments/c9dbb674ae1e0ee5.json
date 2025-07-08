@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Login successful",
+    "data": {
+        "id": "686d952baa719302897d2765",
+        "name": "Elizabeth",
+        "email": "zblair@example.net",
+        "token": "2a853634f5184baab3999ef093c8dbea690466524e4c4e0db56ebb18d3f04b24"
+    }
+}

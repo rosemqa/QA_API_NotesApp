@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686d9529aa719302897d26ef",
+        "title": "dayab",
+        "description": "Factor bank rise often child seat enough.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-08T22:01:13.248Z",
+        "updated_at": "2025-07-08T22:01:13.248Z",
+        "user_id": "686d9528aa719302897d26ce"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686d952aaa719302897d2742",
+        "title": "tenab",
+        "description": "Establish sit me agreement base always day.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-08T22:01:14.927Z",
+        "updated_at": "2025-07-08T22:01:14.927Z",
+        "user_id": "686d952aaa719302897d2728"
+    }
+}
