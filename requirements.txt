@@ -1,9 +1,9 @@
-allure-pytest~=2.13.5
+allure-pytest~=2.14.3
 pytest~=7.2.2
 requests~=2.32.4
 Faker~=26.0.0
 pytest-check~=2.5.0
 pydantic~=2.7.4
 responses~=0.25.7
-pytest-rerunfailures~=15.0
+pytest-rerunfailures
 pytest-xdist~=3.5.0

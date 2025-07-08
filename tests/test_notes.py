@@ -51,7 +51,6 @@ class TestNotes:
             assert note.success is False, 'Check the Success'
             assert note.status == 400, 'Check the Status'
             assert note.message == error_message, 'Check the Message text'
-            print(note.json())
 
         @allure.description('Unable to create note with a title shorter than 4 symbols or longer than 100 symbols')
         @allure.tag('negative')
