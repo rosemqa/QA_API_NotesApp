@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e8a97aa719302897d3eb4",
+        "title": "tooab",
+        "description": "Serious occur against find despite decade.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-09T15:28:23.101Z",
+        "updated_at": "2025-07-09T15:28:23.101Z",
+        "user_id": "686e8a89aa719302897d3ea6"
+    }
+}

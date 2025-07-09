@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e898faa719302897d3dbc",
+        "title": "writer",
+        "description": "Lot short fire play.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-09T15:23:59.181Z",
+        "updated_at": "2025-07-09T15:23:59.181Z",
+        "user_id": "686e897daa719302897d3dab"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e8a77aa719302897d3e93",
+        "title": "reflect",
+        "description": "Visit board rock nor anyone prepare.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-09T15:27:51.343Z",
+        "updated_at": "2025-07-09T15:27:51.343Z",
+        "user_id": "686e8a6caa719302897d3e87"
+    }
+}
