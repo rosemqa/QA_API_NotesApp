@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e8f84aa719302897d3fe9",
+        "title": "feel",
+        "description": "Pay smile manage five skill.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-09T15:49:24.384Z",
+        "updated_at": "2025-07-09T15:49:24.384Z",
+        "user_id": "686e8f78aa719302897d3fdb"
+    }
+}

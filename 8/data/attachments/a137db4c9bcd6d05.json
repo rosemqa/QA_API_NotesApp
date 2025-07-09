@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "686e900854d3c00288c5c9d4",
+        "name": "Madison",
+        "email": "pgonzales@example.com",
+        "phone": "4648339062",
+        "company": "Brooks-Jones"
+    }
+}

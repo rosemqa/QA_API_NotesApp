@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile successful",
+    "data": {
+        "id": "686e900854d3c00288c5c9cf",
+        "name": "Kristine",
+        "email": "joseph08@example.com"
+    }
+}
