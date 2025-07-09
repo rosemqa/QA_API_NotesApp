@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e838faa719302897d3c0b",
+        "title": "avoid",
+        "description": "Traditional movement base.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-09T14:58:23.101Z",
+        "updated_at": "2025-07-09T14:58:23.101Z",
+        "user_id": "686e8383aa719302897d3bfe"
+    }
+}
