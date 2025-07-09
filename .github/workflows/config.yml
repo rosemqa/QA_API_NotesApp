@@ -1,36 +1,70 @@
 name: API tests
 
 on: workflow_dispatch
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
 
 jobs:
-  api-tests:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - name: Checkout (copy) gh-pages repository to GitHub runner
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run API tests with pytest and generate Allure results
+        run: |
+          pytest -m regression --alluredir=allure-results --numprocesses 2
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
+  publish-report:
+    needs: [ run-tests ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
         uses: actions/checkout@v4
         with:
           ref: gh-pages
-          path: ./.github/gh-pages
+          path: gh-pages
 
-      - name: Run API-tests via docker-compose
-        run: |
-          docker compose up api_tests --exit-code-from api_tests || true
-
-      - name: Copy history from gh-pages to allure_results
-        run: |
-          sudo mkdir -p allure_results/history
-          sudo cp -R ./.github/gh-pages/history/* allure_results/history/
-          
-      - name: Generate Allure report
-        run: |
-          docker compose up report
-          
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
         with:
-          branch: gh-pages
-          folder: allure_report
-          clean: true
+          name: allure-results
+          path: allure-results
+
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@v1.12
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
