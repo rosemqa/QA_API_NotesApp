@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "686e7e52aa719302897d3a3f",
+        "title": "enter",
+        "description": "Treat production if team sense.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-09T14:36:02.542Z",
+        "updated_at": "2025-07-09T14:36:02.542Z",
+        "user_id": "686e7e40aa719302897d3a10"
+    }
+}

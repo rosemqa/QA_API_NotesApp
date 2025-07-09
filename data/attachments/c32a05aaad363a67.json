@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "686e7ebcaa719302897d3acc",
+        "name": "Drew",
+        "email": "jessicamoore@example.net",
+        "phone": "6785088705",
+        "company": "Johnson, Pena and Meyer"
+    }
+}

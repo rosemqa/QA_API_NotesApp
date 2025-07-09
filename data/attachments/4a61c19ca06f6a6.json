@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully Updated",
+    "data": {
+        "id": "686e7e3baa719302897d3a00",
+        "title": "sayab",
+        "description": "Community interesting figure.",
+        "category": "Home",
+        "completed": true,
+        "created_at": "2025-07-09T14:35:39.261Z",
+        "updated_at": "2025-07-09T14:35:46.147Z",
+        "user_id": "686e7e27aa719302897d39cc"
+    }
+}
