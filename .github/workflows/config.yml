@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Check out repository
         uses: actions/checkout@v4
         with:
@@ -64,8 +66,7 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          sudo docker compose run ests /bin/sh -c "allure generate allure-results --clean -o allure-report"
-#          docker compose up report
+          docker compose up report
 
       - name: Deploy report to Github Pages
         if: always()
