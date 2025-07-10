@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "6870223a9d1b4b028865215c",
+        "title": "follow",
+        "description": "Wide drop quality edge.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-10T20:27:38.427Z",
+        "updated_at": "2025-07-10T20:27:38.427Z",
+        "user_id": "687022399d1b4b0288652151"
+    }
+}

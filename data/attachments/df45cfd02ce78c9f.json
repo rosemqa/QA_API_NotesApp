@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687022359d1b4b0288652102",
+        "title": "down",
+        "description": "Song trip career two environment need us.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-10T20:27:33.377Z",
+        "updated_at": "2025-07-10T20:27:33.377Z",
+        "user_id": "687022349d1b4b02886520fa"
+    }
+}

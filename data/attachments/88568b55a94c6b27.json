@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687022329d1b4b02886520c8",
+        "title": "hitab",
+        "description": "Herself similar common help dream protect official.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-10T20:27:30.285Z",
+        "updated_at": "2025-07-10T20:27:30.285Z",
+        "user_id": "687022319d1b4b02886520b9"
+    }
+}
