@@ -11,4 +11,5 @@ services:
     build: .
     volumes:
       - .:/test_project
-    command: /bin/sh -c "allure generate allure-results --clean -o allure-report"
+#    command: /bin/sh -c "allure generate allure-results --clean -o allure-report"
+    command: /bin/sh -c "allure generate allure-results -o allure-report"
