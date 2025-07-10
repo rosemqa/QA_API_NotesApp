@@ -1,5 +1,0 @@
-{
-    "success": false,
-    "status": 409,
-    "message": "An account already exists with the same email address"
-}

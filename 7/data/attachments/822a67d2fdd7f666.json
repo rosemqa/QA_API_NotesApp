@@ -1,5 +1,0 @@
-{
-    "success": false,
-    "status": 400,
-    "message": "User name must be between 4 and 30 characters"
-}

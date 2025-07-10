@@ -1,5 +1,0 @@
-{
-    "success": false,
-    "status": 401,
-    "message": "No authentication token specified in x-auth-token header"
-}

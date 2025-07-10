@@ -1,5 +1,0 @@
-{
-    "success": false,
-    "status": 400,
-    "message": "Password must be between 6 and 30 characters"
-}
