@@ -64,7 +64,8 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          docker compose up report
+          sudo docker compose run ests /bin/sh -c "allure generate allure-results --clean -o allure-report"
+#          docker compose up report
 
       - name: Deploy report to Github Pages
         if: always()
