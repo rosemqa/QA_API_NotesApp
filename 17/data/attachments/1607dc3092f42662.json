@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714f119d1b4b0288653cbe",
+        "title": "thank",
+        "description": "Bank prepare story nor everything foreign senior.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-11T17:51:13.751Z",
+        "updated_at": "2025-07-11T17:51:13.751Z",
+        "user_id": "68714f119d1b4b0288653ca1"
+    }
+}

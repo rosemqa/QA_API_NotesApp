@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714f0f9d1b4b0288653c3f",
+        "title": "color",
+        "description": "Media current to.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-11T17:51:11.186Z",
+        "updated_at": "2025-07-11T17:51:11.186Z",
+        "user_id": "68714f0e9d1b4b0288653c24"
+    }
+}

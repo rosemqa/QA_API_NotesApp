@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714f109d1b4b0288653c83",
+        "title": "positive",
+        "description": "Game society happy travel very theory.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-11T17:51:12.659Z",
+        "updated_at": "2025-07-11T17:51:12.659Z",
+        "user_id": "68714f0f9d1b4b0288653c62"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "success": false,
+    "status": 400,
+    "message": "Category must be one of the categories: Home, Work, Personal"
+}
