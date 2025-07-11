@@ -1,0 +1,27 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Notes successfully retrieved",
+    "data": [
+        {
+            "id": "68714fd59d1b4b0288653e44",
+            "title": "budget",
+            "description": "This sense property.",
+            "category": "Personal",
+            "completed": false,
+            "created_at": "2025-07-11T17:54:29.254Z",
+            "updated_at": "2025-07-11T17:54:29.254Z",
+            "user_id": "68714fd49d1b4b0288653e1d"
+        },
+        {
+            "id": "68714fd59d1b4b0288653e39",
+            "title": "program",
+            "description": "Specific dog lose quality prevent experience.",
+            "category": "Work",
+            "completed": false,
+            "created_at": "2025-07-11T17:54:29.049Z",
+            "updated_at": "2025-07-11T17:54:29.049Z",
+            "user_id": "68714fd49d1b4b0288653e1d"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714fd59d1b4b0288653e5e",
+        "title": "money",
+        "description": "Seem region loss edge culture system.",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2025-07-11T17:54:29.764Z",
+        "updated_at": "2025-07-11T17:54:29.764Z",
+        "user_id": "68714fd59d1b4b0288653e40"
+    }
+}

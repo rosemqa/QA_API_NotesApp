@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714fd59d1b4b0288653e67",
+        "title": "less",
+        "description": "Organization remain throw along.",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2025-07-11T17:54:29.896Z",
+        "updated_at": "2025-07-11T17:54:29.896Z",
+        "user_id": "68714fd59d1b4b0288653e4c"
+    }
+}

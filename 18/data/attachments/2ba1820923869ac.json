@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "68714fd29d1b4b0288653dba",
+        "title": "enjoy",
+        "description": "Into ability crime someone hold.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-11T17:54:26.421Z",
+        "updated_at": "2025-07-11T17:54:26.421Z",
+        "user_id": "68714fd19d1b4b0288653d9e"
+    }
+}

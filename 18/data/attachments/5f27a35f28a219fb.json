@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "68714fd99d1b4b0288653f00",
+        "name": "Christian",
+        "email": "jeffrobles@example.net",
+        "phone": "7756210625",
+        "company": "Hall, Graham and Hickman"
+    }
+}
