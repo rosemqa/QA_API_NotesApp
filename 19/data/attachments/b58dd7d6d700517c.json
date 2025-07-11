@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "6871504f9d1b4b0288653fcc",
+        "title": "window",
+        "description": "Easy television training culture public many.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-11T17:56:31.958Z",
+        "updated_at": "2025-07-11T17:56:31.958Z",
+        "user_id": "6871504f9d1b4b0288653fb4"
+    }
+}

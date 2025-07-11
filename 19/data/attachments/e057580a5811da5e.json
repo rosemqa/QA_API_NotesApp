@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "687150549d1b4b02886540a7",
+        "name": "Lisa",
+        "email": "patriciacalderon@example.net",
+        "phone": "3873976663",
+        "company": "Reyes-Santiago"
+    }
+}

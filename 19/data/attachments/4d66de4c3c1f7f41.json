@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "6871504d9d1b4b0288653f62",
+        "title": "admit",
+        "description": "Whom down baby hot direction edge.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-11T17:56:29.611Z",
+        "updated_at": "2025-07-11T17:56:29.611Z",
+        "user_id": "6871504c9d1b4b0288653f45"
+    }
+}

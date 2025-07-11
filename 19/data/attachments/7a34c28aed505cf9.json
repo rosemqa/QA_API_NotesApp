@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully retrieved",
+    "data": {
+        "id": "6871504e9d1b4b0288653f97",
+        "title": "debate",
+        "description": "Voice interview radio stuff five fill however late.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-11T17:56:30.853Z",
+        "updated_at": "2025-07-11T17:56:30.853Z",
+        "user_id": "6871504e9d1b4b0288653f7f"
+    }
+}

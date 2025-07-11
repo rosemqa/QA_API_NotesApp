@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687150509d1b4b0288653fd7",
+        "title": "only",
+        "description": "Teacher across none that father blue any feeling.",
+        "category": "Home",
+        "completed": false,
+        "created_at": "2025-07-11T17:56:32.122Z",
+        "updated_at": "2025-07-11T17:56:32.122Z",
+        "user_id": "6871504f9d1b4b0288653fb7"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687150509d1b4b0288653fef",
+        "title": "opportunity",
+        "description": "Bag top officer dog respond authority us.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-11T17:56:32.500Z",
+        "updated_at": "2025-07-11T17:56:32.500Z",
+        "user_id": "6871504f9d1b4b0288653fc6"
+    }
+}
