@@ -4,11 +4,11 @@ services:
     build: .
     volumes:
       - .:/test_project
-    command: /bin/sh -c "pytest --reruns 3 -n 4 --alluredir=allure-results/ -v"
+    command: /bin/sh -c "pytest --reruns 3 -n 4 --alluredir=allure_results/ -v"
 
   report:
     image: tests
     build: .
     volumes:
       - .:/test_project
-    command: /bin/sh -c "allure generate allure-results --clean -o allure-report"
+    command: /bin/sh -c "allure generate allure_results --clean -o allure_report"
