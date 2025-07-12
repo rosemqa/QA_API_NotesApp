@@ -11,7 +11,7 @@ run_tests:
   before_script:
     - pip install -r requirements.txt
   script:
-    - pytest --alluredir=allure_results -v
+    - pytest --reruns 3 -n 4 --alluredir=allure_results/ -v
   allow_failure: true
   artifacts:
     when: always

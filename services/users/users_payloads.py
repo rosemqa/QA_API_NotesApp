@@ -27,11 +27,11 @@ class UserPayloads:
     @staticmethod
     def update_user():
         first_name = fake.first_name()
+        company = fake.company()
         if len(first_name) < 4:
             first_name += 'ab'
-        return UpdateData(name=first_name, phone=str(fake.random_number(10)), company=fake.company())
+        if len(company) < 4:
+            company += 'ab'
+        return UpdateData(name=first_name, phone=str(fake.random_number(10)), company=company)
 
     new_password = fake.password()
-
-
-print(UserPayloads.create_user().email)
