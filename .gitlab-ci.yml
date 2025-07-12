@@ -38,6 +38,8 @@ allure_report:
 
 pages:
   stage: deploy
+  tags:
+    - docker
   script:
     - mkdir public
     - mv allure_report/* public
