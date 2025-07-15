@@ -1,50 +1,45 @@
 stages:
   - tests
   - report
-  - deploy
+
+default:
+  services:
+    - docker:24.0.5-dind
 
 run_tests:
-  stage: tests
-  tags:
-    - docker
-  image: python:3.12.3-alpine3.20
-  before_script:
-    - pip install -r requirements.txt
-  script:
-    - pytest --reruns 3 -n 4 --alluredir=allure_results/ -v
-  allow_failure: true
-  artifacts:
-    when: always
-    paths:
-      - allure_results
-    expire_in: 10 days
-
-allure_report:
-  stage: report
-  tags:
-    - docker
-  image: frankescobar/allure-docker-service
-  script:
-    - allure generate -c allure_results -o allure_report
-  allow_failure: true
-  artifacts:
-    when: always
-    paths:
-      - allure_results
-      - allure_report
-    expire_in: 10 days
-  rules:
-    - when: always
+    stage: tests
+    when: manual
+    image: docker:24.0.5
+    tags:
+      - docker_dind
+    before_script:
+     - apk add curl
+     - ARTIFACTS_CHECK_URL="https://$CI_SERVER_HOST/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/$CI_DEFAULT_BRANCH/download?job=pages&private_token=$PAT"
+     - curl -k --location --output artifacts.zip $ARTIFACTS_CHECK_URL
+     - unzip artifacts.zip
+     - chmod -R 777 public
+     - mkdir -p allure_results
+     - cp -r public/history allure_results
+    script:
+        - docker compose up api_tests
+    after_script:
+        - docker compose up report
+    artifacts:
+      paths:
+        - allure_report
+      when: on_success
+      expire_in: 5 days
 
 pages:
-  stage: deploy
-  tags:
-    - docker
-  script:
-    - mkdir public
-    - mv allure_report/* public
-  artifacts:
-    paths:
-      - public
-  rules:
-    - when: always
+    stage: report
+    tags:
+      - docker_dind
+    needs:
+      - run_tests
+    script:
+        - mkdir public
+        - cp -r allure_report/* public
+    artifacts:
+      when: on_success
+      paths:
+        - public
