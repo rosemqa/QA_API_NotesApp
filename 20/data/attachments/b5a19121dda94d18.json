@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687687c39d1b4b0288658a5e",
+        "title": "entire",
+        "description": "Quite kind within democratic member strategy official.",
+        "category": "Work",
+        "completed": false,
+        "created_at": "2025-07-15T16:54:27.137Z",
+        "updated_at": "2025-07-15T16:54:27.137Z",
+        "user_id": "687687c29d1b4b0288658a42"
+    }
+}

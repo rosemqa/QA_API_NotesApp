@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Note successfully created",
+    "data": {
+        "id": "687687c09d1b4b02886589eb",
+        "title": "yourself",
+        "description": "Cultural practice clear become before.",
+        "category": "Personal",
+        "completed": false,
+        "created_at": "2025-07-15T16:54:24.681Z",
+        "updated_at": "2025-07-15T16:54:24.681Z",
+        "user_id": "687687bf9d1b4b02886589d2"
+    }
+}

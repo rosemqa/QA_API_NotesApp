@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "status": 200,
+    "message": "Profile updated successful",
+    "data": {
+        "id": "687687c79d1b4b0288658b25",
+        "name": "Amber",
+        "email": "jefferylopez@example.org",
+        "phone": "6876407225",
+        "company": "Wilson Ltd"
+    }
+}
